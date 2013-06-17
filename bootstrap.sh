@@ -18,8 +18,8 @@ if sudo bash -c 'command -v rvm >/dev/null'; then
   exit 1
 fi
 
-# curl-devel doesn't come in centos minimal, the others are just for hacking
-yum install -y curl-devel vim sqlite-devel
+# Install necessary libs
+sudo yum install -y curl-devel yaml-devel vim sqlite-devel
 
 # this is the rpm that rvm complains about, installing it directly surpresses errors
 sudo rpm -iUv https://dl.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
